@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bibliographie — Poster Scientifique</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:      #1a1a2e;
+    --ink-soft: #3d3d5c;
+    --accent:   #2e6b8a;
+    --accent2:  #5ba3c9;
+    --bg:       #f7f4ef;
+    --paper:    #fdfcfa;
+    --rule:     #d6cfc4;
+    --num:      #2e6b8a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--ink);
+    color: #f7f4ef;
+    padding: 3.5rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(255,255,255,0.03) 60px,
+      rgba(255,255,255,0.03) 61px
+    );
+    pointer-events: none;
+  }
+  header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  header p {
+    font-size: 0.95rem;
+    font-style: italic;
+    opacity: 0.65;
+    letter-spacing: 0.04em;
+    position: relative;
+  }
+  .header-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent2);
+    margin: 1.2rem auto 0;
+    position: relative;
+  }
+
+  /* ── Layout ── */
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── Reference list ── */
+  ol {
+    list-style: none;
+    counter-reset: ref;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  li {
+    counter-increment: ref;
+    display: grid;
+    grid-template-columns: 2.4rem 1fr;
+    gap: 0 1rem;
+    padding: 1.15rem 1.2rem 1.15rem 0;
+    border-bottom: 1px solid var(--rule);
+    transition: background 0.18s ease;
+    border-radius: 4px;
+  }
+  li:first-child { border-top: 1px solid var(--rule); }
+  li:hover { background: rgba(46,107,138,0.05); }
+
+  li::before {
+    content: counter(ref);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.82rem;
+    color: var(--num);
+    font-weight: 600;
+    padding-top: 0.08em;
+    text-align: right;
+    opacity: 0.8;
+    user-select: none;
+  }
+
+  .ref-text {
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+
+  .ref-text a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+    word-break: break-all;
+  }
+  .ref-text a:hover { border-color: var(--accent2); }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.78rem;
+    color: #999;
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (max-width: 560px) {
+    li { grid-template-columns: 1.8rem 1fr; gap: 0 0.7rem; }
+    .ref-text { font-size: 0.88rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bibliographie</h1>
+  <div class="header-line"></div>
+</header>
+
+<main>
+  <p class="section-label">Références</p>
+
+  <ol>
+
+    <li><div class="ref-text">Audet, K., Agéco, G., Montel, B., Crespel, D., Tarte, D., Parent, R., Silva, L. D., Paccard, M., Rondeau-Genesse, G., &amp; Roques, J. (s. d.). <em>Conséquences Attendues Survenant en Contexte d'Aggravation des Déficits d'Eau Sévères au Québec (CASCADES).</em></div></li>
+
+    <li><div class="ref-text">Classification écologique du territoire québécois — Carte des zones de végétation, domaines bioclimatiques et régions écologiques. (s. d.). Données Québec. <a href="https://www.donneesquebec.ca/recherche/dataset/systeme-hierarchique-de-classification-ecologique-du-territoire/resource/30d753fd-131d-4fb3-8283-1d9a09be19f7" target="_blank">donneesquebec.ca</a></div></li>
+
+    <li><div class="ref-text">Curasi, S. R., Melton, J. R., Humphreys, E. R., Wang, L., Seiler, C., Cannon, A. J., Chan, E., &amp; Qu, B. (2023). Evaluating the performance of the Canadian Land Surface Scheme Including Biogeochemical Cycles (CLASSIC) tailored to the pan-Canadian domain. <em>Journal of Advances in Modeling Earth Systems, 15</em>(4). <a href="https://doi.org/10.1029/2022MS003480" target="_blank">doi:10.1029/2022MS003480</a></div></li>
+
+    <li><div class="ref-text">Kannenberg, S. A., Guo, J. S., Novick, K. A., Anderegg, W. R. L., Feng, X., Kennedy, D., Konings, A. G., Martínez-Vilalta, J., &amp; Matheny, A. M. (s. d.). Opportunities, challenges and pitfalls in characterizing plant water-use strategies. <em>Functional Ecology.</em> <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2435.13945" target="_blank">doi:10.1111/1365-2435.13945</a></div></li>
+
+    <li><div class="ref-text">Matheny, A. M., Mirfenderesgi, G., &amp; Bohrer, G. (2017). Trait-based representation of hydrological functional properties of plants in weather and ecosystem models. <em>Plant Diversity, 39</em>(1), 1–12. <a href="https://doi.org/10.1016/j.pld.2016.10.001" target="_blank">doi:10.1016/j.pld.2016.10.001</a></div></li>
+
+    <li><div class="ref-text">Mencuccini, M., Manzoni, S., &amp; Christoffersen, B. (s. d.). Modelling water fluxes in plants: From tissues to biosphere. <em>New Phytologist.</em> <a href="https://doi.org/10.1111/nph.15681" target="_blank">doi:10.1111/nph.15681</a></div></li>
+
+    <li><div class="ref-text">Melton, J. R., Arora, V. K., Wisernig-Cojoc, E., Seiler, C., Fortier, M., Chan, E., &amp; Teckentrup, L. (2020). CLASSIC v1.0: The open-source community successor to CLASS and CTEM – Part 1: Model framework and site-level performance. <em>Geoscientific Model Development, 13</em>(6), 2825–2850. <a href="https://doi.org/10.5194/gmd-13-2825-2020" target="_blank">doi:10.5194/gmd-13-2825-2020</a></div></li>
+
+    <li><div class="ref-text">Melton, J. R., &amp; Arora, V. K. (2016). Competition between plant functional types in the Canadian Terrestrial Ecosystem Model (CTEM) v. 2.0. <em>Geoscientific Model Development, 9</em>(1), 323–361. <a href="https://doi.org/10.5194/gmd-9-323-2016" target="_blank">doi:10.5194/gmd-9-323-2016</a></div></li>
+
+    <li><div class="ref-text">Paschalis, A., De Kauwe, M. G., Sabot, M., &amp; Fatichi, S. (s. d.). When do plant hydraulics matter in terrestrial biosphere modelling? <em>Global Change Biology.</em> <a href="https://doi.org/10.1111/gcb.17022" target="_blank">doi:10.1111/gcb.17022</a></div></li>
+
+    <li><div class="ref-text">Ukkola, A. M., De Kauwe, M. G., Pitman, A. J., Best, M. J., Abramowitz, G., Haverd, V., Decker, M., &amp; Haughton, N. (2016). Land surface models systematically overestimate the intensity, duration and magnitude of seasonal-scale evaporative droughts. <em>Environmental Research Letters, 11</em>(10), 104012. <a href="https://doi.org/10.1088/1748-9326/11/10/104012" target="_blank">doi:10.1088/1748-9326/11/10/104012</a></div></li>
+
+    <li><div class="ref-text">Umair, M., Melton, J. R., Roy, A., Eller, C. B., Baltzer, J., Hadiwijaya, B., et al. (2026). Implementing a plant hydraulics parameterization in CLASSIC v.1.4. <em>Journal of Advances in Modeling Earth Systems, 18</em>, e2024MS004385. <a href="https://doi.org/10.1029/2024MS004385" target="_blank">doi:10.1029/2024MS004385</a></div></li>
+
+    <li><div class="ref-text">Verhoef, A., &amp; Egea, G. (2014). Modeling plant transpiration under limited soil water: Comparison of different plant and soil hydraulic parameterizations. <em>Agricultural and Forest Meteorology, 191</em>, 22–32. <a href="https://doi.org/10.1016/j.agrformet.2014.02.009" target="_blank">doi:10.1016/j.agrformet.2014.02.009</a></div></li>
+
+    <li><div class="ref-text">Zhao, M., A, G., Liu, Y., &amp; Konings, A. G. (2022). Evapotranspiration frequently increases during droughts. <em>Nature Climate Change.</em> <a href="https://doi.org/10.1038/s41558-022-01505-3" target="_blank">doi:10.1038/s41558-022-01505-3</a></div></li>
+
+    <li><div class="ref-text">Bakuzis, E. V., &amp; Hansen, H. L. (1965). <em>Balsam fir: A monographic review.</em> University of Minnesota Press. <a href="https://muse.jhu.edu/book/32786" target="_blank">muse.jhu.edu/book/32786</a></div></li>
+
+    <li><div class="ref-text">Díaz, S., &amp; Cabido, M. (2001). Vive la différence: Plant functional diversity matters to ecosystem processes. <em>Trends in Ecology &amp; Evolution, 16</em>(11), 646–655. <a href="https://doi.org/10.1016/S0169-5347(01)02283-2" target="_blank">doi:10.1016/S0169-5347(01)02283-2</a></div></li>
+
+    <li><div class="ref-text">Raj Deepak, S. N., Seiler, C., &amp; Monahan, A. H. (2024). A global sensitivity analysis of parameter uncertainty in the CLASSIC model. <em>Atmosphere-Ocean, 62</em>(5), 347–359. <a href="https://doi.org/10.1080/07055900.2024.2396426" target="_blank">doi:10.1080/07055900.2024.2396426</a></div></li>
+
+  </ol>
+</main>
+
+<footer>
+  Bibliographie générée pour usage académique &mdash; Tous droits réservés aux auteurs cités
+</footer>
+
+</body>
+</html>
